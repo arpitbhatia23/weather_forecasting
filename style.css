@@ -272,8 +272,9 @@ body{display: block;
 }
 
 .not-found img {
-    width: 90%;
-   margin-left: 0;
+    width:50%;
+    align-items: center;
+    text-align: center;
 }
 
 .not-found p {
@@ -544,7 +545,6 @@ left: 10px;
     .container {
         width: 95vw;
         height: 50vh;
-
     }
     .weather-details{
         height:10vh ;
