@@ -540,9 +540,7 @@ left: 10px;
         display: flex;
     flex-wrap: wrap;
     }
-    .background{
-        ;
-    }
+    
     .container {
         width: 95vw;
         height: 50vh;
@@ -552,6 +550,7 @@ left: 10px;
         height:10vh ;
         top:37vh;
         width: 95vw;
+        left: 1vw;
         text-align: center;
     }
     .weather-details p,
@@ -595,7 +594,7 @@ left: 10px;
         width: 95vw;
         height: 20vh;
         top:45vh;
-        left: 1vw;
+        left: 2.5vw;
         
  }
  .weekly-forecast{
@@ -617,7 +616,10 @@ left: 10px;
     font-size: 1.5vmax;
 
  }
-    .map-container{
+ .hourly-forecast1{
+    width: 100%;
+ }   
+ .map-container{
         display: none;
     }
     .inner-container{
@@ -626,6 +628,7 @@ left: 10px;
     .hourly-forecast{
         width: 95vw;
         top: 69vh;
+        left: 1.5vw;
     }
     .date{
         font-size: 2vmax;
