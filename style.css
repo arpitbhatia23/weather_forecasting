@@ -399,9 +399,9 @@ text-align: center;
     display: flex;
    /* margin-top: 2vh;*/
     width: 26vw;
-    height: 40vh;
-    justify-content: center;
-    align-items: center;
+    height: 80%;
+    justify-content: start;
+    align-items:start;
     text-align: center;
  margin-bottom: 20px;
 }
@@ -512,6 +512,7 @@ left: 10px;
     flex-wrap:nowrap;
     margin-bottom: 0px;
     margin-left: 10px;
+    gap: 5vw;
 }
 
 .map-container{
@@ -539,6 +540,9 @@ left: 10px;
         display: flex;
     flex-wrap: wrap;
     }
+    .background{
+        ;
+    }
     .container {
         width: 95vw;
         height: 50vh;
@@ -558,14 +562,15 @@ left: 10px;
         align-items: center;
     }
     .weather-details i{
-        font-size: 3.5vmax;
+        font-size: 3.7vmax;
+        justify-content: center;
     }
      .weather-box.temperature span {
-        font-size: 2.5vw;
+        font-size: 2.2vw;
     }
     .weather-box.temperature {
         position: relative;
-        font-size: 2.5vmax;
+        font-size: 2.2vmax;
         line-height: 1;
         font-weight: 700;
         margin: 20px 0 6px -30px;
@@ -573,16 +578,16 @@ left: 10px;
     
     .weather-box.temperature span{
         position: absolute;
-        font-size: 2.5vmax;
+        font-size: 2.2vmax;
         margin-left: 4px;
         text-align: left;
     }
     .weather-box .info-weather p{
-        font-size: 2.5vmax;
+        font-size: 2.2vmax;
         margin-top: 40px;
     }
     .weather-box .info-weather{
-        font-size: 2.5vmax;
+        font-size: 2.2vmax;
     }
     
 
@@ -598,7 +603,7 @@ left: 10px;
     width: 100%;
     height: 90%;
     text-align: center;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     margin-top: 1vh;
     font-size: 1vmax;
