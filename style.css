@@ -545,14 +545,15 @@ left: 10px;
     
     .container {
         width: 95vw;
-        height: 50vh;
+        height: 80vw;
     }
     .weather-details{
-        height:10vh ;
+        height:20vw ;
         top:37vh;
         width: 95vw;
         left: 1vw;
         text-align: center;
+        margin-top: 2vw;
     }
     .weather-details p,
     .weather-details span
@@ -565,15 +566,18 @@ left: 10px;
         font-size: 3.7vmax;
         justify-content: center;
     }
+    .weather-box{
+        height: 25vw;
+        
+    }
      .weather-box.temperature span {
         font-size: 2.2vw;
     }
     .weather-box.temperature {
-        position: relative;
+        position: absolute;
         font-size: 2.2vmax;
         line-height: 1;
         font-weight: 700;
-        margin: 20px 0 6px -30px;
     }
     
     .weather-box.temperature span{
@@ -584,7 +588,7 @@ left: 10px;
     }
     .weather-box .info-weather p{
         font-size: 2.2vmax;
-        margin-top: 40px;
+        margin-top: 4vw;
     }
     .weather-box .info-weather{
         font-size: 2.2vmax;
@@ -594,8 +598,9 @@ left: 10px;
     .forecast {
         width: 95vw;
         height: 20vh;
-        top:45vh;
+        top:50vh;
         left: 2.5vw;
+        
         
  }
  .weekly-forecast{
@@ -627,12 +632,14 @@ left: 10px;
         display: none;
     }
     .hourly-forecast{
+        height: 22vh;
         width: 95vw;
-        top: 69vh;
+        top: 75vh;
         left: 1.5vw;
     }
     .scroll{
         font-size: 1vmax;
+        height: 60%;
     }
     .date{
         font-size: 2vmax;
