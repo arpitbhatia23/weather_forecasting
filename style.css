@@ -166,7 +166,7 @@ body{display: block;
 }
 .weather-box .info-weather p{
     font-size: 2vw;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .weather-box .info-weather{
     font-size: 1vw;
@@ -498,7 +498,7 @@ left: 10px;
 }
 .scroll{
     justify-content:center;
-    font-size: .45vw;
+    font-size: 1vw;
     margin-top: 50px;
     margin-right: 0px;
     margin-left: 20px;
@@ -611,7 +611,7 @@ left: 10px;
     align-items: start;
     justify-content: center;
     margin-top: 1vh;
-    font-size: 1vmax;
+    font-size: 2vmax;
  }
  .daily-forecast{
     width: 100%;
@@ -619,7 +619,7 @@ left: 10px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1.5vmax;
+    font-size: 2vmax;
 
  }
  .hourly-forecast1{
