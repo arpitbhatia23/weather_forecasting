@@ -483,7 +483,7 @@ left: 10px;
     }
     .scroll{
         justify-content: start;
-        align-items: none;
+        align-items: start;
         overflow-x: scroll;
     margin-top: 2px; /* Set margin-top to 0 */
     margin-bottom: 0;
@@ -497,7 +497,7 @@ left: 10px;
  
 }
 .scroll{
-    justify-content:center;
+    justify-content:start;
     font-size: 1vw;
     margin-top: 50px;
     margin-right: 0px;
@@ -636,8 +636,10 @@ left: 10px;
         width: 95vw;
         top: 75vh;
         left: 1.5vw;
+        align-items: start;
     }
-    .scroll{
+    .scroll{ 
+        align-items: start;
         font-size: 1vmax;
         height: 60%;
     }
