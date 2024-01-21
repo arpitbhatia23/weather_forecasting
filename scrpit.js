@@ -257,6 +257,7 @@ async function updateHourlyForecast(latitude, longitude) {
                 listItem.style.border="2px solid white";
                 listItem.style.background="rgba(255, 255, 255, 0.421)";
                 listItem.style.borderRadius="20px";
+                
                 // Add space between list items
                 weeklylist.appendChild(document.createElement('br'));
             }
@@ -325,7 +326,6 @@ function createIconElement(emoji) {
     const humidity= document.querySelector('.weather-details .humidity span ');
     const wind = document.querySelector('.weather-details .wind span ');
     const pressure= document.querySelector('.weather-details .pressure span ');
-    const sunrise= document.querySelector('.weather-details .sunrise');
 
    const background=document.querySelector('.background');
    const audioElement = document.getElementById('bg-audio');
