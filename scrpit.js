@@ -164,7 +164,7 @@ async function updateHourlyForecast(latitude, longitude) {
             for (let i = 0; i < 8; i++) {
                 const hourData = data.list[i];
                 const dateTime = new Date(hourData.dt * 1000);
-                const formattedDateTime = dateTime.toLocaleString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+                const formattedDateTime = dateTime.toLocaleString('en-US', { weekday: 'short',  hour: 'numeric', minute: '2-digit' });
                 const temperature = parseInt(hourData.main.temp);
                 const weatherDescription = hourData.weather[0].description;
                 const humidity = hourData.main.humidity;
@@ -174,12 +174,17 @@ async function updateHourlyForecast(latitude, longitude) {
                 listItem.innerHTML = `
                 <img src=" https://openweathermap.org/img/wn/${weatherIcon}.png"><br>
                 <strong>${formattedDateTime}</strong>:
+
                      <strong>${temperature}°C<br></strong>
                   <strong> ${weatherDescription}<br></strong>
                    <strong> Humidity: ${humidity}%<br></strong>
                     <strong>Rain: ${rainChances}%</strong>
                     `;
                 hourlyList.appendChild(listItem);
+                listItem.style.border="2px solid white";
+                listItem.style.borderRadius="20px ";
+                listItem.style.backgroundColor="rgba(255, 255, 255, 0.421)";
+
 
                 // Add space between list items
             }
@@ -231,7 +236,7 @@ async function updateHourlyForecast(latitude, longitude) {
             for (let i = 0; i < 5; i++) {
                 const dayData = dailyData[i];
                 const dateTime = new Date(dayData.dt * 1000);
-                const formattedDateTime = dateTime.toLocaleString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+                const formattedDateTime = dateTime.toLocaleString('en-US', { weekday: 'short',  });
                 const temperature = parseInt(dayData.main.temp);
                 const weatherDescription = dayData.weather[0].description;
                 const humidity = dayData.main.humidity;
@@ -243,13 +248,15 @@ async function updateHourlyForecast(latitude, longitude) {
                 <img src=" https://openweathermap.org/img/wn/${weatherIcon}.png"><br>
                 <strong>${formattedDateTime}</strong>:
 
-                    <strong> ${temperature}°C<br></strong>
+                    <strong> ${temperature}°C</strong>
                   <strong>  ${weatherDescription}<br></strong>
-                   <strong> Humidity: ${humidity}%<br></strong>
+                   <strong> Humidity: ${humidity}%</strong>
                    <strong> Rain Chances: ${rainChances}%</strong>
                     `;
                 weeklylist.appendChild(listItem);
-
+                listItem.style.border="2px solid white";
+                listItem.style.background="rgba(255, 255, 255, 0.421)";
+                listItem.style.borderRadius="20px";
                 // Add space between list items
                 weeklylist.appendChild(document.createElement('br'));
             }
