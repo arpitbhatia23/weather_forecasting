@@ -620,3 +620,11 @@ position: absolute;
         justify-content: center;
     }
 }
+ul:hover{
+    transform: scale(1,1);
+    display:flex;
+    font-size: 0.9vw;
+    text-align: center;
+justify-content: center;
+
+}
