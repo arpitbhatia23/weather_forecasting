@@ -170,7 +170,7 @@ async function updateHourlyForecast(latitude, longitude) {
                 const humidity = hourData.main.humidity;
                 const rainChances = hourData.pop * 100; // Probability of precipitation (pop) converted to percentage
                 const weatherIcon = hourData.weather[0].icon;
-                const listItem = document.createElement('div');
+                const listItem = document.createElement('ul');
                 listItem.innerHTML = `
                 <img src=" https://openweathermap.org/img/wn/${weatherIcon}.png"><br>
                 <strong>${formattedDateTime}</strong>:
@@ -243,7 +243,7 @@ async function updateHourlyForecast(latitude, longitude) {
                 const rainChances = dayData.pop * 100; // Probability of precipitation (pop) converted to percentage
                 const weatherIcon = dayData.weather[0].icon;
 
-                const listItem = document.createElement('ul');
+                const listItem = document.createElement('ol');
                 listItem.innerHTML = `
                 <img src=" https://openweathermap.org/img/wn/${weatherIcon}.png"><br>
                 <strong>${formattedDateTime}</strong>:
@@ -257,7 +257,6 @@ async function updateHourlyForecast(latitude, longitude) {
                 listItem.style.border="2px solid white";
                 listItem.style.background="rgba(255, 255, 255, 0.421)";
                 listItem.style.borderRadius="20px";
-                
                 // Add space between list items
                 weeklylist.appendChild(document.createElement('br'));
             }
