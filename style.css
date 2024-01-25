@@ -621,10 +621,12 @@ position: absolute;
     }
 }
 ul:hover{
-    transform: scale(1,1);
+    transform: scale(0.8,0.8);
     display:flex;
     font-size: 0.9vw;
     text-align: center;
 justify-content: center;
+align-items: center;
+gap:20px
 
 }
