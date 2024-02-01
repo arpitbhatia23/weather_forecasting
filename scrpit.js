@@ -332,58 +332,58 @@ function createIconElement(emoji) {
         case 'Clear':
             image.src = 'images/clear.png';
             background.style.backgroundImage='url("images/clear-background.jpg")';
-            audioElement.src ='sound effects/clear.mp3';
+           // audioElement.src ='sound effects/clear.mp3';
             break;
         case 'Rain':
             image.src = 'images/rain.png';
             background.style.backgroundImage='url("images/rainbackground.jpg")';
-            audioElement.src = 'sound effects/rain.mp3';
+           // audioElement.src = 'sound effects/rain.mp3';
             break;
             case 'Storm':
                 image.src = 'images/rain.png';
             background.style.backgroundImage='url("images/rain-background.jpg")';
-            audioElement.src = 'sound effects/strom.mp3';
+           // audioElement.src = 'sound effects/strom.mp3';
 
             break;
         case 'Snow':
             image.src = 'images/snow.png';
           background.style.backgroundImage='url("images/snow-background.jpg")';
-          audioElement.src = 'sound effects/snow.mp3';
+         // audioElement.src = 'sound effects/snow.mp3';
 
             break;
         case 'Clouds':
             image.src = 'images/cloud.png';
             background.style.backgroundImage='url("images/clouds-background.jpg")';
-            audioElement.src = 'sound effects/clear.mp3';
+          //  audioElement.src = 'sound effects/clear.mp3';
 
             break;
         case 'Mist':
             image.src = 'images/mist.png';
           background.style.backgroundImage='url("images/mist-background.jpg")';
-          audioElement.src = 'sound effects/fog.mp3';
+          //audioElement.src = 'sound effects/fog.mp3';
           break;
 
         case 'Haze':
             image.src = 'images/mist.png';
            background.style.backgroundImage='url("images/haze-background.webp")';
-           audioElement.src = 'sound effects/fog.mp3';
+          // audioElement.src = 'sound effects/fog.mp3';
 
             break;
             case 'Fog':
                 image.src = 'images/mist.png';
                 background.style.backgroundImage='url("images/mist-background.jpg")';
-                audioElement.src = 'sound effects/fog.mp3';
+              //  audioElement.src = 'sound effects/fog.mp3';
        break;
        case 'Smoke':
                 image.src = 'images/mist.png';
                 background.style.backgroundImage='url("images/haze-background.webp")';
-                audioElement.src = 'sound effects/fog.mp3';
+               // audioElement.src = 'sound effects/fog.mp3';
        break;
        
             default:
             image.src = 'images/cloud.png';
           background.style.backgroundImage='url("images/defaultbackground.jpg")';
-          audioElement.src = 'sound effects/clear.mp3';
+        //  audioElement.src = 'sound effects/clear.mp3';
 
             break;
     }

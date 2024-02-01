@@ -3,7 +3,7 @@
 * {
    background-attachment: fixed;
     margin: 0;
-    padding: 1px;
+    padding: 0;
     box-sizing: border-box;
     font-family: Algerian;
    /* font-family: "", sans-serif;*/
@@ -104,7 +104,7 @@ body{display: block;
 
 .weather-box img {
   
-    width: 35%;
+    width: 29%;
     text-align: right;
 }
 
