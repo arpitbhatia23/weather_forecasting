@@ -200,7 +200,6 @@ async function updateHourlyForecast(latitude, longitude) {
     navigator.geolocation.getCurrentPosition( async function (position) {
        const latitude = position.coords.latitude;
        const longitude = position.coords.longitude;
-        cityElement.textContent = `City: ${city}`;
         cityElement.textContent = `Country: ${country}`;
         getWeatherData(latitude, longitude);
     });
