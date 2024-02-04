@@ -337,6 +337,7 @@ function createIconElement(emoji) {
             image.src = 'images/rain.png';
             background.style.backgroundImage='url("images/rainbackground.jpg")';
            // audioElement.src = 'sound effects/rain.mp3';
+           
             break;
             case 'Storm':
                 image.src = 'images/rain.png';
@@ -354,7 +355,7 @@ function createIconElement(emoji) {
             image.src = 'images/cloud.png';
             background.style.backgroundImage='url("images/clouds-background.jpg")';
           //  audioElement.src = 'sound effects/clear.mp3';
-
+          
             break;
         case 'Mist':
             image.src = 'images/mist.png';

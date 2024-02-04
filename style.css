@@ -414,7 +414,6 @@ text-align: center;
    /*border: 2px solid rgba(0, 0, 0, 0.529); /* Corrected rgba values */
     border-radius: 40px;
     /*background: rgba(234, 233, 232, 0.366);*/
-    font-size:3vw;
     position: absolute;
     bottom: 0%;
     left: 0%;
@@ -570,7 +569,6 @@ position: absolute;
         top:45vh;
         left: 2.5vw;
         
-        
  }
  .weekly-forecast{
     display: flex;
@@ -580,7 +578,7 @@ position: absolute;
     align-items: start;
     justify-content: center;
     margin-top: 1vh;
-    font-size: 2.5vmax;
+    font-size: 2vmax;
  }
  
  .daily-forecast{
@@ -589,7 +587,7 @@ position: absolute;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 2vmax;
+    font-size: 2.5vmax;
 
  }
  .hourly-forecast1{
@@ -610,7 +608,7 @@ position: absolute;
     }
     .scroll{ 
         align-items: start;
-        font-size: 1vmax;
+        font-size: 2vmax;
         height: 60%;
     }
     .date{
@@ -619,14 +617,17 @@ position: absolute;
         align-items: center;
         justify-content: center;
     }
-}
-ul:hover{
-    transform: scale(0.8,0.8);
-    display:flex;
-    font-size: 0.9vw;
-    text-align: center;
-justify-content: center;
-align-items: center;
-gap:20px
-
+    ul:hover{
+        transform: scale(0.8,0.8);
+        display:flex;
+        font-size: 2vw;
+        text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap:20px
+    
+    }
+    .search-box input{
+        font-size: 3vw;
+    }
 }
