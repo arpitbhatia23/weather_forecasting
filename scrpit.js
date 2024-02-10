@@ -217,7 +217,6 @@ async function updateHourlyForecast(latitude, longitude) {
     }
 });
 
-   /*weeklyforecast*/
    async function updateWeeklyForecast(latitude, longitude) {
     const APIKEY = 'e38b8adced5269e5111dc584c110097a';
 
@@ -292,13 +291,13 @@ const sunriseTimestamp = json.sys.sunrise * 1000; // Convert seconds to millisec
 
     seaLevelElement.textContent = `Sea Level: ${seaLevel} hPa`;
     groundLevelElement.textContent = `Ground Level: ${groundLevel} hPa`;
-    const airPurity = json.main.aqi; // Assuming AQI (Air Quality Index) is available in the API response
+    const airPurity = json.main.aqi; 
 
     if (airPurity !== undefined) {
         airPurityElement.textContent = `Air Purity: ${airPurity}`;
-        airPurityElement.style.display = 'flex'; // Show the air purity element
+        airPurityElement.style.display = 'flex'; 
     } else {
-        airPurityElement.style.display = 'none'; // Hide the air purity element if not available
+        airPurityElement.style.display = 'none'; 
     }
 
 

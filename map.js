@@ -1,9 +1,7 @@
 async function getCityWeather(city, apiKey) {
-    // Your implementation
   }
 
   function handleNotFound() {
-    // Your implementation
   }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -23,11 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function showMapLoadingState() {
-        // Implement logic to show a loading state for the map
     }
 
     function hideMapLoadingState() {
-        // Implement logic to hide the loading state for the map
     }
     async function getWeatherData(city) {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}`);
@@ -38,10 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
    
 
 
-    // Function to add a marker with weather information to the map
     async function addWeatherMarker(city) {
       console.log('adding maker for city',city)
-        // Remove previous markers
         markers.forEach(marker => map.removeLayer(marker));
         markers.length = 0;
         try {
@@ -54,28 +48,24 @@ document.addEventListener('DOMContentLoaded', function () {
         const { coord, weather, main } = weatherData;
         const { lat, lon } = coord;
         const { description, icon } = weather[0];
-        const temperature = main.temp;
         const humidity = main.humidity;
 
         const marker = L.marker([lat, lon]).addTo(map);
-        marker.bindPopup(`<b>${city}</b><br>${description}<br>${temperature}°C<br>
+        marker.bindPopup(`<b>${city}</b><br>${description}<br>
         Humidity: ${humidity}%<br>
                <img src="http://openweathermap.org/img/w/${icon}.png" alt="Weather Icon">`);
 
-        // Store the marker in the markers array
         markers.push(marker);
 
         map.setView([lat, lon], 9);
     } catch (error) {
         console.error('Error fetching weather data:', error);
-        // Handle the error, e.g., display an error message to the user
     }
   }
   function addUserLocationMarker() {
         navigator.geolocation.getCurrentPosition(function (position) {
             const userLocation = [position.coords.latitude, position.coords.longitude];
 
-            // Remove previous markers
             markers.forEach(marker => map.removeLayer(marker));
             markers.length = 0;
 
@@ -84,11 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       } addUserLocationMarker();
   
-  async function handleWeatherData(cityWeather) {
-        // Implement your logic to handle weather data
-        // ...
-
-        // Example: Call addWeatherMarker
+  async function handleWeatherData(cityWeather) {       
         addWeatherMarker(cityWeather.name);
     }
     search.addEventListener('click', async () => {
@@ -103,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
             addWeatherMarker(cityInput)
         } catch (error) {
             console.error('Error fetching data:', error);
-            // Handle the error, e.g., display an error message to the user
         }
     });
     search.addEventListener('click', async () => {
