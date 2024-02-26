@@ -56,12 +56,7 @@ search.addEventListener('click', async () => {
 
 });
 
-function handleNotFound() {
-    weatherbox.classList.remove('active');
-    weatherdetails.classList.remove('active');
-    error404.classList.add('active');
-    locationElement.textContent='';
-}
+
 async function getCurrentLocationWeather() {
     const APIKEY = 'e38b8adced5269e5111dc584c110097a';
 
@@ -152,10 +147,8 @@ async function updateHourlyForecast(latitude, longitude) {
 
         const data = await response.json();
 
-        // Clear previous hourly forecast
         hourlyList.innerHTML = '';
 
-        // Display the next 24 hours forecast
         if (data.list && data.list.length > 0) {
             const rowContainer = document.createElement('div');
     rowContainer.classList.add('scroll');
@@ -186,7 +179,6 @@ async function updateHourlyForecast(latitude, longitude) {
                 listItem.style.backgroundColor="rgba(255, 255, 255, 0.421)";
 
 
-                // Add space between list items
             }
         } else {
             console.error('Hourly data is not available.');
@@ -205,17 +197,7 @@ async function updateHourlyForecast(latitude, longitude) {
     });
    }
    
-   window.addEventListener('load', async () => {
-    try {
-        updateLocation();
-        updateDateTime();
-        const currentLocationWeather = await getCurrentLocationWeather();
-        handleWeatherData(currentLocationWeather);
-    } catch (error) {
-        console.error('Error fetching data', error);
-        handleNotFound();
-    }
-});
+  
 
    async function updateWeeklyForecast(latitude, longitude) {
     const APIKEY = 'e38b8adced5269e5111dc584c110097a';
@@ -226,7 +208,6 @@ async function updateHourlyForecast(latitude, longitude) {
         if (!weeklylist) {
             console.error('Weekly forecast element not found in the DOM.');
             return;}
-        // Clear previous forecast
         weeklylist.innerHTML = '';
         if (data.list && data.list.length > 0) {
             const dailyData = data.list.filter((item, index) => index % 8 === 0);
@@ -269,13 +250,23 @@ async function updateHourlyForecast(latitude, longitude) {
     }
 } 
 
-   
+function handleNotFound() {
+    weatherbox.classList.remove('active');
+    weatherdetails.classList.remove('active');
+    hourlyList.classList.remove('active')
+    weeklylist.classList.remove('active')
+    error404.classList.add('active');
+    locationElement.textContent='';
+} 
 
 function handleWeatherData(json) {
 
     console.log('weather data:,json')
     weatherbox.classList.add('active');
     weatherdetails.classList.add('active');
+    hourlyList.classList.add('active');
+    weeklylist.classList.add('active');
+
     error404.classList.remove('active');
 const sunriseTimestamp = json.sys.sunrise * 1000; // Convert seconds to milliseconds
     const sunsetTimestamp = json.sys.sunset * 1000; // Convert seconds to milliseconds
@@ -291,15 +282,8 @@ const sunriseTimestamp = json.sys.sunrise * 1000; // Convert seconds to millisec
 
     seaLevelElement.textContent = `Sea Level: ${seaLevel} hPa`;
     groundLevelElement.textContent = `Ground Level: ${groundLevel} hPa`;
-    const airPurity = json.main.aqi; 
-
-    if (airPurity !== undefined) {
-        airPurityElement.textContent = `Air Purity: ${airPurity}`;
-        airPurityElement.style.display = 'flex'; 
-    } else {
-        airPurityElement.style.display = 'none'; 
-    }
-
+   
+   
 
     const sunriseIcon = document.getElementById('sunrise-icon') || createIconElement('🌅');
 const sunsetIcon = document.getElementById('sunset-icon') || createIconElement('🌇');

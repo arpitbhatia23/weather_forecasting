@@ -45,7 +45,6 @@ body{display: block;
     background:transparent;
     display: flex;
     align-items: center;
-   /* pointer-events: all;*/
 }
 
 .search-box i {
@@ -117,7 +116,10 @@ body{display: block;
 
 .weather-box.active,
 .weather-details.active,
-.not-found.active {
+.not-found.active ,
+.weekly-forecast.active
+
+{
     visibility: visible;
 }
 
@@ -138,7 +140,8 @@ body{display: block;
 }
 .container.active .weather-details.humidity .info-humidity
 ,.container.active .weather-details.wind .info-wind,
-.container.active .weather-box .box .info-weather{
+.container.active .weather-box .box .info-weather
+{
     transform: translateY(0%);
     transition:transform  1s ease;
 }
@@ -184,7 +187,6 @@ body{display: block;
     text-align: right;
 
 }
-/* ... (existing styles) ... */
 .weather-details {
     height: 23vh ;
     width: 100%;
@@ -360,7 +362,7 @@ margin-left: 10px;
     top: 0vh;
     left: 32vw;
     width: 33vw;
-    height: 65%;
+    height: 70%;
     border-radius: 40px;
     padding: 30px;
     color: #000000;
@@ -376,7 +378,9 @@ align-items: center;
 justify-content: center;
 margin-top: 0vh;
 text-align: center;
+color: #000000;
 }
+
 .weekly-forecast::-webkit-scrollbar{
     display: none;
 }
@@ -411,7 +415,7 @@ text-align: center;
 font-size: 2vw;
 border-radius: 30px;
 color: #000000;
-margin-top: 10px;
+margin-top: 40px;
 align-items: center;
 justify-content:center;
 text-align: center;
@@ -441,24 +445,24 @@ position: absolute;
  
 }
 .hourly-list{
-    margin-top: 40px;
+    margin-top: 75px;
 
     display:flex;
     flex-wrap:nowrap;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     margin-left: 10px;
     gap: 0.5vw;
-    font-size: .85vw;
+    font-size: .8vw;
 }
 
 .map-container{
-        height: 64.5vh;
+        height: 59.5vh;
     width: 34vw;
     right: 0%;
     background: rgba(255, 255, 255, 0.366);
     backdrop-filter: blur(10px);
     position: absolute;
-    margin-top: 3.5vh;
+    margin-top:.5%;
     margin-right: .5vw;
     margin-left: 2vw;
     border: 2px solid white ;
@@ -469,6 +473,11 @@ position: absolute;
     height: 100%;
     width: 100%;
  border-radius: 30px;
+}
+.navbar{
+    height: 4vw;
+    background-color:rgba(240, 238, 235, 0.516);
+    backdrop-filter: blur(30px);
 }
 @media only screen and (max-width: 600px) {
     body{
@@ -596,3 +605,5 @@ position: absolute;
         font-size: 3vw;
     }
 }
+
+
